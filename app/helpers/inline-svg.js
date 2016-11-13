@@ -19,7 +19,7 @@ export function inlineSvg(path, options) {
   Ember.assert("No SVG found for "+path, svg);
 
   svg = applyClass(svg, options.class);
-  svg = appluId(svg, options.id);
+  svg = applyId(svg, options.id);
 
   return Ember.String.htmlSafe(svg);
 }
