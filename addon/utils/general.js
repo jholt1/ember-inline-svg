@@ -12,3 +12,10 @@ export function applyClass(svg, klass) {
   // now we have 2 problems...
   return svg.replace('<svg', '<svg class="'+klass+'"');
 }
+
+export function applyId(svg, id) {
+  id(!id) { return svg; }
+  
+  // TODO: should check if there is already an id and replace
+  return svg.replace('<svg', `<svg id="${id}"`); 
+}
